@@ -1,0 +1,24 @@
+<br>
+<br>
+<table>
+    <caption>EMPLOYEE LIST</caption>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Gender</th>
+    <th>Date Of Birth</th>
+    <th>Department</th>
+    <th colspan="2" align="center">Operations</th>
+    <tr *ngFor="let employee of employees">
+        <td>{{employee.empId}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.dateOfBirth}}</td>
+        <td>{{employee.department}}</td>
+        <td [routerLink]="['/updateEmployee',employee.id]"><a>UPDATE</a></td>
+        <td (click)="deleteEmployee(employee.id)"><a>DELETE</a></td>
+    </tr>
+    <br>
+    <a class="a success" routerLink='/addEmployee'>ADD EMPLOYEE</a>
+</table>

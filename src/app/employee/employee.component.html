@@ -1,0 +1,16 @@
+<a routerLink="/">< back</a>
+<div>
+<h3>Add New Employee</h3>
+<form id="frmAddEmployee" name="frmAddEmployee" #employeeData="ngForm" (ngSubmit)= addOrUpdateEmployee(employeeData.value)>
+    <label>First Name: </label><input type='text' name="firstName" id="firstName" placeholder="firstName" [(ngModel)] ="data.firstName"  ngModel><br>
+    <label>Last Name: </label><input type='text' name="lastName" id="lastName" placeholder="lastName" [(ngModel)] ="data.lastName"   ngModel><br>
+    <label>Gender: </label><input type='text' name="gender" id="gender" placeholder="gender" [(ngModel)] ="data.gender"  ngModel><br>
+    <label>Date Of Birth: </label><input type='text' name="dateOfBirth" id="dateOfBirth" placeholder="dateOfBirth" [(ngModel)] ="data.dateOfBirth"   ngModel><br>
+    <label>Department: </label><input type='text' name="department" id="department" placeholder="department" [(ngModel)] ="data.department"  ngModel><br>
+    <input type="submit" value="Save Employee">
+</form>
+</div>
+<br>
+<div>
+<h2>{{confairmationString}}</h2>
+</div>
